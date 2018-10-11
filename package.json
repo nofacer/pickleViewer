@@ -1,0 +1,15 @@
+{
+  "name": "pickleViewer",
+  "version": "0.0.1",
+  "main": "main.js",
+  "devDependencies": {
+    "electron": "^3.0.3",
+    "electron-packager": "^12.2.0"
+  },
+  "buildDependenciesFromSource": true,
+  "scripts": {
+    "start": "electron .",
+    "build-python": "pyinstaller ./py/api.py --clean --distpath ./pydist",
+    "pack-app": "./node_modules/.bin/electron-packager . --overwrite --ignore=py$"
+  }
+}
